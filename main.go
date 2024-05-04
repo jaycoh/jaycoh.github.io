@@ -18,7 +18,6 @@ func main() {
 	}
 
 	portString := ":" + port
-	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(portString, nil))
 }
